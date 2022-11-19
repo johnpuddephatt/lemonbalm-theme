@@ -1,0 +1,98 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "common/global";
+
+:root {
+  --contentgutter: 1.5rem;
+  --sidebarwidth: 0;
+  --containerwidth: 100vw;
+}
+@media (min-width: 640px) {
+  /* SM */
+  :root {
+    --containerwidth: 640px;
+  }
+}
+@media (min-width: 768px) {
+  /* MD */
+  :root {
+    --containerwidth: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  /* LG */
+  :root {
+    --contentgutter: 4rem;
+    --containerwidth: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  /* XL */
+  :root {
+    --sidebarwidth: 2/5;
+
+    --contentgutter: 8rem;
+    --containerwidth: 1280px;
+    --gallery-block--gutter-size: 2rem;
+  }
+}
+@media (min-width: 1536px) {
+  /* 2XL */
+  :root {
+    --containerwidth: 1536px;
+  }
+}
+
+.wp-block-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(4 * var(--gallery-block--gutter-size, 16px));
+  margin-bottom: calc(3 * var(--gallery-block--gutter-size, 16px));
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+dialog::backdrop {
+  @apply bg-black bg-opacity-70;
+}
+
+@media (min-width: 640px) {
+  .alignwide,
+  .wp-block-quote {
+    width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .alignwide,
+  .wp-block-quote {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .alignwide,
+  .wp-block-quote {
+    width: calc(1024px - 8rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .alignwide,
+  .wp-block-quote {
+    width: calc(1280px - 10rem);
+  }
+}
+
+.wp-block-columns {
+  gap: 8rem;
+}

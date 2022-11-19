@@ -1,0 +1,18 @@
+input,
+optgroup,
+select,
+textarea {
+  @apply w-full p-2 border-red-light border rounded-lg bg-transparent text-black font-normal focus-visible:outline-none  focus-visible:ring-4 focus-visible:ring-red-dark focus-visible:ring-opacity-25;
+}
+
+.wpcf7-form label {
+  @apply grid grid-cols-[1fr_2fr] my-4 text-red-light font-bold;
+}
+
+textarea {
+  @apply h-40;
+}
+
+.wpcf7-submit {
+  @apply ml-[33.333%] w-[66.66667%] border-2 font-bold text-red-light;
+}

@@ -1,0 +1,45 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "common/global";
+
+.block-editor-block-list__layout {
+  @apply font-sans text-lg antialiased !important;
+}
+
+.wp-block {
+  @apply mx-auto max-w-screen-md;
+}
+
+.wp-block.editor-post-title.editor-post-title__input {
+  @apply font-sans text-6xl font-extrabold !important;
+}
+
+.is-side .cf-block__fields {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 0 0 30px !important;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.is-side .cf-association__option-title-inner {
+  position: relative;
+}
+
+.is-side .cf-association__cols {
+  display: block;
+}
+
+.is-side .cf-association__cols::before {
+  display: none;
+}
+
+.is-side .cf-association__col {
+  width: 100%;
+}
+
+.is-side .cf-association__col + .cf-association__col {
+  border-top: 1px solid #eee;
+}

@@ -1,0 +1,17 @@
+@layer base {
+  @font-face {
+    font-family: "Karla";
+    font-weight: 400;
+    src: url(/resources/fonts/Karla-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "Karla";
+    font-weight: 700;
+    src: url(/resources/fonts/Karla-Bold.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 400;
+    src: url(/resources/fonts/SourceSerifPro-Regular.woff2) format("woff2");
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "__generated__": "⚠️ This file is generated. Do not edit.",
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "layout": {
+      "contentSize": "840px",
+      "wideSize": "1100px"
+    },
+    "color": {
+      "custom": false,
+      "customGradient": false,
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "name": "Transparent",
+          "slug": "transparent",
+          "color": "#ffffff00"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
+          "color": "#282828"
+        },
+        {
+          "name": "Gray",
+          "slug": "gray",
+          "color": "#757373"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Warm-white",
+          "slug": "warm-white",
+          "color": "#f9f4ea"
+        },
+        {
+          "name": "Green-white",
+          "slug": "green-white",
+          "color": "#eaede2"
+        },
+        {
+          "name": "Pink-white",
+          "slug": "pink-white",
+          "color": "#fcf0fb"
+        },
+        {
+          "name": "Red-light",
+          "slug": "red-light",
+          "color": "#f5806a"
+        },
+        {
+          "name": "Red-dark",
+          "slug": "red-dark",
+          "color": "#fc6e42"
+        },
+        {
+          "name": "Teal-bright",
+          "slug": "teal-bright",
+          "color": "#5ac1ae"
+        },
+        {
+          "name": "Teal-light",
+          "slug": "teal-light",
+          "color": "#5d98a8"
+        },
+        {
+          "name": "Teal-dark",
+          "slug": "teal-dark",
+          "color": "#3e879f"
+        },
+        {
+          "name": "Blue-dark",
+          "slug": "blue-dark",
+          "color": "#3270a9"
+        },
+        {
+          "name": "Blue-light",
+          "slug": "blue-light",
+          "color": "#407ccb"
+        },
+        {
+          "name": "Green-dark",
+          "slug": "green-dark",
+          "color": "#2c5d58"
+        },
+        {
+          "name": "Green-light",
+          "slug": "green-light",
+          "color": "#35877d"
+        },
+        {
+          "name": "Wellbeing-dark",
+          "slug": "wellbeing-dark",
+          "color": "#2f6d62"
+        },
+        {
+          "name": "Wellbeing-light",
+          "slug": "wellbeing-light",
+          "color": "#57c1ad"
+        },
+        {
+          "name": "Design-dark",
+          "slug": "design-dark",
+          "color": "#a75499"
+        },
+        {
+          "name": "Design-light",
+          "slug": "design-light",
+          "color": "#da9bc4"
+        },
+        {
+          "name": "Strategy-dark",
+          "slug": "strategy-dark",
+          "color": "#c2873a"
+        },
+        {
+          "name": "Strategy-light",
+          "slug": "strategy-light",
+          "color": "#f7a738"
+        },
+        {
+          "name": "Orange",
+          "slug": "orange",
+          "color": "#ffa201"
+        }
+      ]
+    },
+    "custom": {
+      "spacing": {},
+      "typography": {
+        "font-size": {},
+        "line-height": {}
+      }
+    },
+    "spacing": {
+      "padding": true,
+      "units": [
+        "px",
+        "%",
+        "em",
+        "rem",
+        "vw",
+        "vh"
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "name": "Karla",
+          "slug": "sans",
+          "fontFamily": "Karla,sans-serif"
+        },
+        {
+          "name": "Source Serif Pro",
+          "slug": "serif",
+          "fontFamily": "Source Serif Pro,serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "xs",
+          "slug": "xs",
+          "size": "0.75rem"
+        },
+        {
+          "name": "sm",
+          "slug": "sm",
+          "size": "0.875rem"
+        },
+        {
+          "name": "base",
+          "slug": "base",
+          "size": "1rem"
+        },
+        {
+          "name": "lg",
+          "slug": "lg",
+          "size": "1.125rem"
+        },
+        {
+          "name": "xl",
+          "slug": "xl",
+          "size": "1.25rem"
+        },
+        {
+          "name": "2xl",
+          "slug": "2xl",
+          "size": "1.5rem"
+        },
+        {
+          "name": "3xl",
+          "slug": "3xl",
+          "size": "1.875rem"
+        },
+        {
+          "name": "4xl",
+          "slug": "4xl",
+          "size": "2.25rem"
+        },
+        {
+          "name": "5xl",
+          "slug": "5xl",
+          "size": "3rem"
+        },
+        {
+          "name": "6xl",
+          "slug": "6xl",
+          "size": "3.75rem"
+        },
+        {
+          "name": "7xl",
+          "slug": "7xl",
+          "size": "4.5rem"
+        },
+        {
+          "name": "8xl",
+          "slug": "8xl",
+          "size": "6rem"
+        },
+        {
+          "name": "9xl",
+          "slug": "9xl",
+          "size": "8rem"
+        }
+      ]
+    }
+  }
+}
