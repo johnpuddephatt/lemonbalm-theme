@@ -68,7 +68,7 @@
             <div class="text-green-light text-2xl font-bold">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}.
               {{ ucfirst($service->post_name) }}
             </div>
-            <h3 class="text-green-dark my-6 font-serif text-3xl">{{ $service->post_title }}</h3>
+            <h3 class="text-green-dark my-6 font-serif text-3xl">{!! $service->post_title !!}</h3>
             <p class="max-w-md text-lg">{{ wp_trim_words($service->post_excerpt, 30, '...') }}</p>
             <span
               class="text-green-dark border-green-dark mt-8 inline-block rounded-xl border-2 py-3 px-6 font-bold lowercase">read
