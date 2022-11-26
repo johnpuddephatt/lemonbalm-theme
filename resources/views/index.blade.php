@@ -131,7 +131,7 @@
 
     <div class="container grid grid-cols-2">
       <div>
-        {!! do_shortcode('[contact-form-7 id="15" title="Contact form"]') !!}
+        {!! do_shortcode('[contact-form-7 id="5" title="Contact form"]') !!}
       </div>
       <div>
         <img class="-ml-32 -mt-12 block w-[calc(100%+12rem)] max-w-none" src="@asset('/images/yoga.png')" />
