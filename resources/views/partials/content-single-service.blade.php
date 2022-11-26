@@ -9,6 +9,9 @@
   <header class="bg-green-white mb-40">
 
     <div class="container relative pt-24 pb-36">
+      {!! wp_get_attachment_image(carbon_get_post_meta($post->ID, 'logo'), null, null, [
+          'class' => 'w-64 h-64 absolute right-16 top-0',
+      ]) !!}
       <div class="text-green-light text-3xl font-bold">{{ ucfirst($post->post_name) }}</div>
       <h1 class="text-green-dark mt-8 mb-12 max-w-2xl font-serif text-5xl">{{ $post->post_title }}</h1>
       <div class="prose prose-xl max-w-2xl">{!! wpautop($post->post_excerpt) !!}</div>

@@ -11,6 +11,24 @@ add_action("carbon_fields_register_fields", function () {
         Field::make("textarea", "footer_text", __("Footer Text")),
     ]);
 
+    Container::make("theme_options", __("Homepage"))
+        ->set_page_parent($parent_options) // reference to a top level container
+        ->add_fields([
+            Field::make("textarea", "casestudy_quote", __("Case Study quote")),
+            Field::make(
+                "text",
+                "casestudy_quote_author",
+                __("Case Study quote author")
+            ),
+            Field::make(
+                "text",
+                "casestudy_quote_authorrole",
+                __("Case Study quote author")
+            ),
+            Field::make("image", "casestudy_image", __("Case Study image")),
+            Field::make("text", "casestudy_link", __("Case Study link")),
+        ]);
+
     Container::make("theme_options", __("Social Links"))
         ->set_page_parent($parent_options) // reference to a top level container
         ->add_fields([
@@ -21,6 +39,11 @@ add_action("carbon_fields_register_fields", function () {
             Field::make("text", "youtube", __("YouTube Link")),
             Field::make("text", "vimeo", __("Vimeo Link")),
         ]);
+
+    Container::make("post_meta", "Logo")
+        ->where("post_type", "=", "service")
+        ->set_context("side")
+        ->add_fields([Field::make("image", "logo", __("Service logo"))]);
 
     Container::make("post_meta", "Case studies")
         ->where("post_type", "=", "service")

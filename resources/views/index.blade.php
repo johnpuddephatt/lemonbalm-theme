@@ -60,11 +60,28 @@
 
     <div class="container space-y-48 py-48">
       @foreach ($services as $service)
-        <a href="{{ get_permalink($service->ID) }}" class="grid grid-cols-2 gap-16">
-          <div>
+        <a href="{{ get_permalink($service->ID) }}" class="grid grid-cols-2 gap-16 relative">
+          <div class="relative">
             {!! get_the_post_thumbnail($service->ID, null, ['class' => 'w-full rounded-3xl']) !!}
+
+            @if (!(($loop->iteration + 2) % 3))
+              <img class="absolute top-auto -bottom-48 w-[120%] max-w-none -left-40" src="@asset('/images/home-service-1.png')"
+                alt="">
+            @elseif(!(($loop->iteration + 1) % 3))
+              <img class="absolute -top-32 w-full" src="@asset('/images/home-service-2.png')" alt="">
+            @elseif(!($loop->iteration % 3))
+              <img class="absolute -left-48 -top-48 w-96" src="@asset('/images/home-service-3a.png')" alt="">
+              <img class="-bottom-36 left-[200%] absolute w-64" src="@asset('/images/home-service-3b.png')" alt="">
+            @endif
+
+            {!! wp_get_attachment_image(carbon_get_post_meta($service->ID, 'logo'), null, null, [
+                'class' =>
+                    'w-40 h-40 absolute  ' .
+                    ($loop->iteration % 2 ? '-left-8 ' : '-right-8 ') .
+                    ($loop->iteration % 3 ? '-top-8 ' : '-bottom-8 '),
+            ]) !!}
           </div>
-          <div class="{{ $loop->odd ? '-order-1' : '' }}">
+          <div class="{{ $loop->even ? '-order-1' : '' }}">
             <div class="text-green-light text-2xl font-bold">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}.
               {{ ucfirst($service->post_name) }}
             </div>
@@ -78,37 +95,44 @@
       @endforeach
     </div>
 
-    <div class="relative py-36">
-      <div class="container relative">
-        <span class="bg-warm-white absolute right-36 -top-12 z-10 block h-36 w-36 rounded-full"></span>
-        <span class="bg-strategy-light absolute right-72 -top-24 z-10 block h-20 w-20 rounded-full"></span>
+    @if (carbon_get_theme_option('casestudy_quote'))
+      <div class="relative py-36">
+        <div class="container relative">
+          <span class="bg-warm-white absolute right-36 -top-12 z-10 block h-36 w-36 rounded-full"></span>
+          <span class="bg-strategy-light absolute right-72 -top-24 z-10 block h-20 w-20 rounded-full"></span>
 
-        <div class="bg-pink-white relative grid grid-cols-2 overflow-hidden rounded-3xl">
+          <div class="bg-pink-white relative grid grid-cols-2 overflow-hidden rounded-3xl">
 
-          <div class="p-16 pr-8">
-            <figure class="text-green-dark">
-              <blockquote class="font-serif text-3xl">
-                “Lemon Balm brought an impressive and detailed understanding of Yorkshire Water’s vision to take
-                responsibility for the water environment”
-              </blockquote>
-              <figcaption class="mt-4 font-bold">
-                <p class="text-xl">Richard Flint,</p>
-                CEO Yorkshire Water
-              </figcaption>
-            </figure>
-            <a class="text-green-dark border-green-dark mt-8 inline-block rounded-xl border-2 py-3 px-6 font-bold lowercase"
-              href="#">read more</a>
+            <div class="p-16 pr-8">
+              <figure class="text-green-dark">
+                <blockquote class="font-serif text-3xl">
+                  “{{ carbon_get_theme_option('casestudy_quote') }}”
+                </blockquote>
+                <figcaption class="mt-4 font-bold">
+                  <p class="text-xl">{{ carbon_get_theme_option('casestudy_quote_author') }},</p>
+                  {{ carbon_get_theme_option('casestudy_quote_authorrole') }}
+                </figcaption>
+              </figure>
+              @if (carbon_get_theme_option('casestudy_link'))
+                <a class="text-green-dark border-green-dark mt-8 inline-block rounded-xl border-2 py-3 px-6 font-bold lowercase"
+                  href="{{ carbon_get_theme_option('casestudy_link') }}">read more</a>
+              @endif
+            </div>
+            <div>
+              {!! wp_get_attachment_image(carbon_get_theme_option('casestudy_image'), null, null, [
+                  'class' => 'bg-red-light block h-full w-full object-cover object-center',
+              ]) !!}
+            </div>
           </div>
-          <div><img class="bg-red-light block h-full w-full object-cover object-center"></div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-0 -bottom-72 -z-10" width="417.47" height="629.36"
+          viewBox="0 0 417.47 629.36">
+          <path fill="#c3deda" opacity="0.2"
+            d="M-1.77,4878c41.47,22.4,89.6,35.26,140.28,36.51,199.2,4.91,285.3-159.34,276.6-303.11s-151.06-93.28-316.33-301C69.14,4273.16,34.09,4280.26.17,4312"
+            transform="translate(1.77 -4285.23)" />
+        </svg>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-0 -bottom-72 -z-10" width="417.47" height="629.36"
-        viewBox="0 0 417.47 629.36">
-        <path fill="#c3deda" opacity="0.2"
-          d="M-1.77,4878c41.47,22.4,89.6,35.26,140.28,36.51,199.2,4.91,285.3-159.34,276.6-303.11s-151.06-93.28-316.33-301C69.14,4273.16,34.09,4280.26.17,4312"
-          transform="translate(1.77 -4285.23)" />
-      </svg>
-    </div>
+    @endif
 
     <svg class="text-warm-white h-auto min-w-full" xmlns="http://www.w3.org/2000/svg" width="1258" height="123.77"
       viewBox="0 0 1258 123.77">
