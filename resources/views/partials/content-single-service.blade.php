@@ -13,7 +13,7 @@
           'class' => 'w-64 h-64 absolute right-16 top-0',
       ]) !!}
       <div class="text-green-light text-3xl font-bold">{{ ucfirst($post->post_name) }}</div>
-      <h1 class="text-green-dark mt-8 mb-12 max-w-2xl font-serif text-5xl">{{ $post->post_title }}</h1>
+      <h1 class="text-green-dark mt-8 mb-12 max-w-2xl font-serif text-5xl">{!! $post->post_title !!}</h1>
       <div class="prose prose-xl max-w-2xl">{!! wpautop($post->post_excerpt) !!}</div>
 
       {!! get_the_post_thumbnail(null, '16by9', [
