@@ -1,8 +1,8 @@
 @extends('layouts.app', ['header' => 'absolute top-0 left-0 right-0 z-10'])
 @section('content')
   <div class="bg-warm-white flex min-h-[calc(100vh-4rem)] flex-row items-center">
-    <div class="container relative mt-24 mb-12 grid grid-cols-2 items-center">
-      <img class="absolute -top-20 -left-20 h-auto w-60" src="@asset('/images/hero-flower.png')" />
+    <div class="container relative mt-72 lg:mt-24 mb-12 grid lg:grid-cols-2 items-center">
+      <img class="absolute hidden lg:block -top-20 -left-20 h-auto w-60" src="@asset('/images/hero-flower.png')" />
       <div>
         <h1 class="text-red-dark mb-4 font-serif text-4xl">{{ get_bloginfo('description') }}</h1>
         <p class="max-w-md text-lg">{{ carbon_get_theme_option('introduction_copy') }}</p>
@@ -10,7 +10,7 @@
           href="{{ carbon_get_theme_option('intro_link_url') }}">{{ carbon_get_theme_option('intro_link_text') }}</a>
       </div>
       <div class="relative">
-        <img class="-ml-24 mt-24 block w-[calc(100%+6rem)] max-w-none" src="@asset('/images/woman-with-tea.png')" />
+        <img class="-ml-24 lg:mt-24 block w-[calc(100%+6rem)] max-w-none" src="@asset('/images/woman-with-tea.png')" />
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
     </svg>
   </div>
   <div class="bg-green-white relative">
-    <div class="container grid grid-cols-2 gap-8 py-24">
+    <div class="container grid lg:grid-cols-2 gap-8 py-24">
       <h2 class="text-green-dark font-serif text-5xl">Our services</h2>
       <p class="relative text-lg">
         {{ carbon_get_theme_option('services_text') }}
@@ -46,30 +46,31 @@
 
     </div>
 
-    <div class="container space-y-48 py-48">
+    <div class="container space-y-24 lg:space-y-48 py-48">
       @foreach ($services as $service)
-        <a href="{{ get_permalink($service->ID) }}" class="grid grid-cols-2 gap-16 relative">
+        <a href="{{ get_permalink($service->ID) }}" class="grid lg:grid-cols-2 gap-8 lg:gap-16 relative">
           <div class="relative">
             {!! get_the_post_thumbnail($service->ID, null, ['class' => 'w-full rounded-3xl']) !!}
 
             @if (!(($loop->iteration + 2) % 3))
-              <img class="absolute top-auto -bottom-48 w-[120%] max-w-none -left-40" src="@asset('/images/home-service-1.png')"
-                alt="">
+              <img
+                class="hidden lg:block absolute top-auto bottom-0 lg:-bottom-48 w-full lg:w-[120%] max-w-none -left-12 lg:-left-40"
+                src="@asset('/images/home-service-1.png')" alt="">
             @elseif(!(($loop->iteration + 1) % 3))
-              <img class="absolute -top-32 w-full" src="@asset('/images/home-service-2.png')" alt="">
+              <img class="hidden lg:block absolute -top-32 w-full" src="@asset('/images/home-service-2.png')" alt="">
             @elseif(!($loop->iteration % 3))
-              <img class="absolute -left-48 -top-48 w-96" src="@asset('/images/home-service-3a.png')" alt="">
-              <img class="-bottom-36 left-[200%] absolute w-64" src="@asset('/images/home-service-3b.png')" alt="">
+              <img class="hidden lg:block absolute -left-48 -top-48 w-96" src="@asset('/images/home-service-3a.png')" alt="">
+              <img class="hidden lg:block -bottom-36 left-[200%] absolute w-64" src="@asset('/images/home-service-3b.png')" alt="">
             @endif
 
             {!! wp_get_attachment_image(carbon_get_post_meta($service->ID, 'logo'), null, null, [
                 'class' =>
-                    'w-40 h-40 absolute  ' .
-                    ($loop->iteration % 2 ? '-left-8 ' : '-right-8 ') .
-                    ($loop->iteration % 3 ? '-top-8 ' : '-bottom-8 '),
+                    'w-40 h-40 absolute -right-3 -top-3  ' .
+                    ($loop->iteration % 2 ? 'lg:-left-8 ' : 'lg:-right-8 ') .
+                    ($loop->iteration % 3 ? 'lg:-top-8 ' : 'lg:-bottom-8 '),
             ]) !!}
           </div>
-          <div class="{{ $loop->even ? '-order-1' : '' }}">
+          <div class="{{ $loop->even ? 'lg:-order-1' : '' }}">
             <div class="text-green-light text-2xl font-bold">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}.
               {{ ucfirst($service->post_name) }}
             </div>
@@ -84,12 +85,12 @@
     </div>
 
     @if (carbon_get_theme_option('casestudy_quote'))
-      <div class="relative py-36">
+      <div class="relative lg:py-36">
         <div class="container relative">
-          <span class="bg-warm-white absolute right-36 -top-12 z-10 block h-36 w-36 rounded-full"></span>
-          <span class="bg-strategy-light absolute right-72 -top-24 z-10 block h-20 w-20 rounded-full"></span>
+          <span class="bg-warm-white absolute right-36 -top-24 lg:-top-12 z-10 block h-36 w-36 rounded-full"></span>
+          <span class="bg-strategy-light absolute right-72 -top-36 lg:-top-24 z-10 block h-20 w-20 rounded-full"></span>
 
-          <div class="bg-pink-white relative grid grid-cols-2 overflow-hidden rounded-3xl">
+          <div class="bg-pink-white relative grid lg:grid-cols-2 overflow-hidden rounded-3xl">
 
             <div class="p-16 pr-8">
               <figure class="text-green-dark">
@@ -135,7 +136,7 @@
 
       </div>
 
-      <div class="container grid grid-cols-2">
+      <div class="container grid lg:grid-cols-2">
         <div>
           {!! do_shortcode('[contact-form-7 id="5" title="Contact form"]') !!}
         </div>

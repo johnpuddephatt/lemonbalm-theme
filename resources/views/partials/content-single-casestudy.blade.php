@@ -1,14 +1,14 @@
 <article {{ post_class('') }}>
 
-  <header class="bg-warm-white mb-40">
-    <div class="container relative py-36">
-      <img src="@asset('/images/case-study-header.png')" alt="" class="absolute right-12 top-36 h-auto w-64">
+  <header class="bg-warm-white lg:mb-40">
+    <div class="container relative py-12 lg:py-36">
+      <img src="@asset('/images/case-study-header.png')" alt="" class="lg:absolute ml-auto right-12 top-0 lg:top-36 h-auto w-40 lg:w-64">
       <div class="text-green-light text-3xl font-bold">Case study</div>
       <h1 class="text-green-dark mt-8 mb-12 font-serif max-w-4xl text-5xl">{!! $post->post_title !!}</h1>
       <div class="prose prose-xl max-w-2xl">{!! wpautop($post->post_excerpt) !!}</div>
 
       {!! get_the_post_thumbnail(null, '16by9', [
-          'class' => 'w-full max-w-xl mt-16 -mb-96 mx-auto relative z-10',
+          'class' => 'w-full max-w-xl mt-16  lg:-mb-96 mx-auto relative z-10',
           'sizes' => '80vw',
       ]) !!}
 

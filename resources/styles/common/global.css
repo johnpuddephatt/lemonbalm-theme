@@ -22,7 +22,7 @@
 }
 
 .wp-block-quote.is-style-plain {
-  @apply border-l-0 my-36 px-36;
+  @apply border-l-0 my-36 px-0 lg:px-36;
 }
 
 .wp-block-media-text p {

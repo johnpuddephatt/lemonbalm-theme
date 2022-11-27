@@ -8,7 +8,7 @@
   @while (have_posts())
     @php(the_post())
     <div class="bg-warm-white">
-      <div class="container grid grid-cols-2 pt-12">
+      <div class="container grid lg:grid-cols-2 pt-12">
         <div class="self-center">
           @include('partials.page-header')
           <div class="prose max-w-lg pb-24">@php(the_content())</div>

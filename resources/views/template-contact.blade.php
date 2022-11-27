@@ -23,7 +23,7 @@
           {{ the_excerpt() }}
         </header>
 
-        <div class="lg:w-9/12 ml-auto">
+        <div class="lg:w-9/12 lg:ml-auto">
           {!! get_the_post_thumbnail() !!}
         </div>
 

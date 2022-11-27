@@ -1,7 +1,8 @@
 <header class="{{ $header ?? null }}">
   <div class="flex flex-row justify-center">
     <a class="mt-8" href="{{ home_url('/') }}">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-auto w-48" width="150.92" height="72.64" viewBox="0 0 150.92 72.64">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-auto w-48 relative z-30" width="150.92" height="72.64"
+        viewBox="0 0 150.92 72.64">
         <defs>
           <style>
             .cls-1 {
@@ -49,13 +50,50 @@
 
   @if (has_nav_menu('primary_navigation'))
 
-    <nav class="flex flex-row justify-center gap-8 py-8" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+    <!-- <nav class="flex flex-row justify-center gap-8 py-8" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
       @foreach ($primaryNavigation as $link)
-        <a href="{{ $link->url }}" class="text-teal-light {{ $link->classes }} font-serif lowercase">
+<a href="{{ $link->url }}" class="text-teal-light {{ $link->classes }} font-serif lowercase">
           {{ $link->label }}
         </a>
-      @endforeach
-    </nav>
+@endforeach
+    </nav> -->
+
+    <nav class="py-8 px-2">
+      <div class="container flex flex-wrap items-center justify-center mx-auto">
+
+        <button onclick="document.getElementById('navbar-dropdown').classList.remove('translate-x-full')"
+          data-collapse-toggle="navbar-dropdown" type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="text-green-light w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" fill="currentColor"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div
+          class="bg-pink-white flex items-center transition translate-x-full z-20 md:transform-none md:translate-x-0 transform fixed md:static inset-0 md:bg-transparent"
+          id="navbar-dropdown">
+          <button class="md:hidden absolute right-8 top-8"
+            onclick="document.getElementById('navbar-dropdown').classList.add('translate-x-full')"
+            aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="text-green-light w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+
+          </button>
+          <ul class="flex flex-col p-4 md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+            @foreach ($primaryNavigation as $link)
+              <li>
+                <a href="{{ $link->url }}"
+                  class="text-teal-light {{ $link->classes }} text-2xl md:text-base font-serif lowercase">
+                  {{ $link->label }}
+                </a>
+              </li>
+            @endforeach
 
   @endif
 

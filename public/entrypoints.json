@@ -6,7 +6,7 @@
       "js/app.39eee6.js"
     ],
     "css": [
-      "css/app.f1ab43.css"
+      "css/app.e7ff88.css"
     ],
     "dependencies": []
   },
@@ -17,7 +17,7 @@
       "js/editor.ca0ffb.js"
     ],
     "css": [
-      "css/editor.82c99b.css"
+      "css/editor.58ffde.css"
     ],
     "dependencies": [
       "wp-blocks"

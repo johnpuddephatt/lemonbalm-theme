@@ -1,4 +1,4 @@
-<article {{ post_class('') }}>
+<article {{ post_class('max-w-100vw overflow-hidden') }}>
   <div class="overflow-x-hidden">
     <svg class="text-green-white h-auto min-w-full" xmlns="http://www.w3.org/2000/svg" width="1258" height="123.77"
       viewBox="0 0 1258 123.77">
@@ -8,9 +8,9 @@
   </div>
   <header class="bg-green-white mb-40">
 
-    <div class="container relative pt-24 pb-36">
+    <div class="container relative lg:pt-24 pb-36">
       {!! wp_get_attachment_image(carbon_get_post_meta($post->ID, 'logo'), null, null, [
-          'class' => 'w-64 h-64 absolute right-16 top-0',
+          'class' => 'w-40 h-40 ml-auto lg:w-64 lg:h-64 lg:absolute right-16 top-0',
       ]) !!}
       <div class="text-green-light text-3xl font-bold">{{ ucfirst($post->post_name) }}</div>
       <h1 class="text-green-dark mt-8 mb-12 max-w-2xl font-serif text-5xl">{!! $post->post_title !!}</h1>
@@ -23,7 +23,7 @@
 
       <span
         class="{{ array_rand(array_flip(['bg-orange', 'bg-blue-dark', 'bg-design-light'])) }} absolute left-72 -bottom-16 block h-6 w-6 rounded-full"></span>
-      <img src="@asset(array_rand(array_flip(['/images/service-featured-image-decoration.png', '/images/service-featured-image-decoration-2.png', '/images/service-featured-image-decoration-3.png'])))" class="absolute -right-8 top-[calc(100%+12rem)] z-10 h-auto w-72" />
+      <img src="@asset(array_rand(array_flip(['/images/service-featured-image-decoration.png', '/images/service-featured-image-decoration-2.png', '/images/service-featured-image-decoration-3.png'])))" class="hidden lg:block absolute -right-8 top-[calc(100%+12rem)] z-10 h-auto w-72" />
 
     </div>
 
@@ -43,12 +43,12 @@
       <div class="my-16 space-y-4">
         @foreach ($case_studies as $case_study)
           <a href="{{ get_permalink($case_study->ID) }}"
-            class="bg-warm-white flex flex-row justify-between overflow-hidden rounded-3xl">
+            class="bg-warm-white flex flex-col lg:flex-row justify-between overflow-hidden rounded-3xl">
             <div class="p-8 flex-1">
               <h3 class="text-green-dark mb-2 font-serif text-4xl">{{ $case_study->post_title }}</h3>
               <p class="max-w-lg">{{ wp_trim_words($case_study->post_excerpt, 30, '...') }}</p>
             </div>
-            <div class="w-72">
+            <div class="lg:w-72 hidden lg:block">
               {!! get_the_post_thumbnail($case_study->ID, '16by9', ['class' => 'h-full w-full object-cover object-center']) !!}
 
             </div>
