@@ -49,7 +49,7 @@
               <p class="max-w-lg">{{ wp_trim_words($case_study->post_excerpt, 30, '...') }}</p>
             </div>
             <div class="w-72">
-              {!! get_the_post_thumbnail($case_study->ID, null, ['class' => 'h-full w-full object-cover object-center']) !!}
+              {!! get_the_post_thumbnail($case_study->ID, '16x9', ['class' => 'h-full w-full object-cover object-center']) !!}
 
             </div>
           </a>
