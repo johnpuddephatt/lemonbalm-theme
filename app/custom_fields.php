@@ -1,4 +1,5 @@
 <?php
+
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
@@ -14,12 +15,36 @@ add_action("carbon_fields_register_fields", function () {
     Container::make("theme_options", __("Homepage"))
         ->set_page_parent($parent_options) // reference to a top level container
         ->add_fields([
+            Field::make("separator", "crb_separator", __("Introduction")),
+            Field::make(
+                "textarea",
+                "introduction_copy",
+                __("Introduction copy")
+            ),
+            Field::make("text", "intro_link_text", __("Intro button text")),
+            Field::make("text", "intro_link_url", __("Intro button URL")),
+
+            Field::make("separator", "crb_separator_2", __("Our approach")),
+            Field::make("text", "approach_heading", __("Approach heading")),
+            Field::make("text", "approach_text", __("Approach text")),
+            Field::make("text", "approach_link", __("Approach button URL")),
+            Field::make(
+                "textarea",
+                "approach_link_text",
+                __("Approach button text")
+            ),
+
+            Field::make("separator", "crb_separator_3", __("Our services")),
+            Field::make("textarea", "services_text", __("Services intro")),
+
+            Field::make("separator", "crb_separator_4", __("Case Study")),
             Field::make("textarea", "casestudy_quote", __("Case Study quote")),
             Field::make(
                 "text",
                 "casestudy_quote_author",
                 __("Case Study quote author")
             ),
+
             Field::make(
                 "text",
                 "casestudy_quote_authorrole",
@@ -27,6 +52,10 @@ add_action("carbon_fields_register_fields", function () {
             ),
             Field::make("image", "casestudy_image", __("Case Study image")),
             Field::make("text", "casestudy_link", __("Case Study link")),
+
+            Field::make("separator", "crb_separator_5", __("Contact")),
+            Field::make("text", "contact_heading", __("Contact heading")),
+            Field::make("textarea", "contact_text", __("Contact text")),
         ]);
 
     Container::make("theme_options", __("Social Links"))

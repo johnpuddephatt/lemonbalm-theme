@@ -4,14 +4,10 @@
     <div class="container relative mt-24 mb-12 grid grid-cols-2 items-center">
       <img class="absolute -top-20 -left-20 h-auto w-60" src="@asset('/images/hero-flower.png')" />
       <div>
-        <h1 class="text-red-dark mb-4 font-serif text-4xl">Reconnecting people and nature.</h1>
-        <p class="max-w-md text-lg">Lemon Balm is a Leeds-based social enterprise founded in 2015.
-          We deliver programs of Horticultural Therapy and Design
-          Landscapes large and small for the health and wellbeing of
-          people and our planet.</p>
-        <a class="border-red-light mt-8 inline-block rounded-xl border-2 py-3 px-6 font-bold lowercase" href="#services">How
-          we can
-          help</a>
+        <h1 class="text-red-dark mb-4 font-serif text-4xl">{{ get_bloginfo('description') }}</h1>
+        <p class="max-w-md text-lg">{{ carbon_get_theme_option('introduction_copy') }}</p>
+        <a class="border-red-light mt-8 inline-block rounded-xl border-2 py-3 px-6 font-bold lowercase"
+          href="{{ carbon_get_theme_option('intro_link_url') }}">{{ carbon_get_theme_option('intro_link_text') }}</a>
       </div>
       <div class="relative">
         <img class="-ml-24 mt-24 block w-[calc(100%+6rem)] max-w-none" src="@asset('/images/woman-with-tea.png')" />
@@ -23,16 +19,10 @@
     <div class="container relative my-24 max-w-4xl">
       <span class="bg-warm-white absolute -left-8 top-24 -z-10 block h-36 w-36 rounded-full"></span>
       <span class="bg-warm-white absolute right-0 top-0 -z-10 block h-20 w-20 rounded-full"></span>
-      <h2 class="text-gray mb-4 text-xl font-bold">Our holistic approach</h2>
-      <p class="text-blue-light font-serif text-3xl">We take a holistic approach which is uniquely rooted in the science
-        of
-        horticultural therapy and landscape
-        design, drawing on our shared expertise in ecology, volunteer management, community development & climate
-        resilience.</p>
+      <h2 class="text-gray mb-4 text-xl font-bold">{{ carbon_get_theme_option('approach_heading') }}</h2>
+      <p class="text-blue-light font-serif text-3xl">{{ carbon_get_theme_option('approach_text') }}</p>
       <a class="text-blue-dark mt-8 inline-block rounded-xl border-2 border-black py-3 px-6 font-bold lowercase"
-        href="#services">more
-        about
-        us</a>
+        href="{{ carbon_get_theme_option('approach_link') }}">{{ carbon_get_theme_option('approach_link_text') }}</a>
 
       <img class="mt-8 -ml-8 block w-[calc(100%+4rem)] max-w-none" src="@asset('/images/holistic-approach.png')" />
 
@@ -49,10 +39,8 @@
   <div class="bg-green-white relative">
     <div class="container grid grid-cols-2 gap-8 py-24">
       <h2 class="text-green-dark font-serif text-5xl">Our services</h2>
-      <p class="relative text-lg">Whether you need to create a green space which promotes wellbeing or helps you to offset
-        your
-        environmental impact by locking in carbon, deliver a horticulture programme with measurable health and wellbeing
-        outcomes or get support with funding, Lemon Balm provides a quality service which is evidence-based and effective.
+      <p class="relative text-lg">
+        {{ carbon_get_theme_option('services_text') }}
         <img class="absolute top-full -right-24 h-auto w-48" src="@asset('/images/bee.png')" />
       </p>
 
@@ -142,14 +130,9 @@
 
     <div class="bg-warm-white">
       <div class="container">
-        <h2 class="text-red-dark mb-8 font-serif text-5xl">Have a project in mind?</h2>
-        <p class="mb-2 max-w-md text-lg">We are based in Meanwood in Leeds but work with people and organisations all
-          across
-          the
-          country.</p>
-        <p class="mb-2 max-w-md text-lg">If you are interested in what we do, have a project in mind or would like to have
-          a
-          chat, send us a message.</p>
+        <h2 class="text-red-dark mb-8 font-serif text-5xl">{{ carbon_get_theme_option('contact_heading') }}</h2>
+        <div class="space-y-3 mb-2 max-w-md text-lg">{!! wpautop(carbon_get_theme_option('contact_text')) !!}</div>
+
       </div>
 
       <div class="container grid grid-cols-2">
