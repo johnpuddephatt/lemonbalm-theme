@@ -4,7 +4,7 @@
     <div class="container relative py-36">
       <img src="@asset('/images/case-study-header.png')" alt="" class="absolute right-12 top-36 h-auto w-64">
       <div class="text-green-light text-3xl font-bold">Case study</div>
-      <h1 class="text-green-dark mt-8 mb-12 font-serif text-5xl">{!! $post->post_title !!}</h1>
+      <h1 class="text-green-dark mt-8 mb-12 font-serif max-w-4xl text-5xl">{!! $post->post_title !!}</h1>
       <div class="prose prose-xl max-w-2xl">{!! wpautop($post->post_excerpt) !!}</div>
 
       {!! get_the_post_thumbnail(null, '16by9', [

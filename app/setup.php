@@ -123,6 +123,13 @@ add_action(
         add_theme_support("align-wide");
 
         add_post_type_support("page", "excerpt");
+
+        add_image_size("16by9-xxl", 2000, 1125, true);
+        add_image_size("16by9-xl", 1600, 900, true);
+        add_image_size("16by9-l", 1200, 675, true);
+        add_image_size("16by9", 800, 450, true);
+        add_image_size("16by9-s", 400, 225, true);
+        add_image_size("16by9-xs", 240, 135, true);
     },
     20
 );

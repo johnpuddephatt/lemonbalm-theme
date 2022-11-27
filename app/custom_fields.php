@@ -29,7 +29,7 @@ add_action("carbon_fields_register_fields", function () {
             Field::make("text", "approach_text", __("Approach text")),
             Field::make("text", "approach_link", __("Approach button URL")),
             Field::make(
-                "textarea",
+                "text",
                 "approach_link_text",
                 __("Approach button text")
             ),
