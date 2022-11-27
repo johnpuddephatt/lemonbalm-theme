@@ -44,7 +44,7 @@
         @foreach ($case_studies as $case_study)
           <a href="{{ get_permalink($case_study->ID) }}"
             class="bg-warm-white flex flex-row justify-between overflow-hidden rounded-3xl">
-            <div class="p-8">
+            <div class="p-8 flex-1">
               <h3 class="text-green-dark mb-2 font-serif text-4xl">{{ $case_study->post_title }}</h3>
               <p class="max-w-lg">{{ wp_trim_words($case_study->post_excerpt, 30, '...') }}</p>
             </div>
