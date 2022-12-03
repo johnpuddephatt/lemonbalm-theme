@@ -14,7 +14,7 @@
           <div class="prose max-w-lg pb-24">@php(the_content())</div>
         </div>
         <div>
-          {!! get_the_post_thumbnail(null, '16by9', [
+          {!! get_the_post_thumbnail(null, 'large', [
               'class' => 'w-full',
               'sizes' => '80vw',
           ]) !!}
@@ -38,9 +38,9 @@
           @foreach ($tabs as $tab)
             <div class="js-tabs__content">
               <div class="bg-green-dark mb-8 h-2 w-28"></div>
-              <h2 class="font-italic text-green-dark mb-8 font-serif text-4xl">{{ $tab->post_title }}</h2>
+              <h2 class="font-italic text-green-dark font-serif mb-8 text-4xl">{{ $tab->post_title }}</h2>
               <div
-                class="prose prose-h3:font-bold prose-h2:font-serif prose-blockquote:font-serif prose-blockquote:leading-snug prose-blockquote:border-green-light prose-headings:text-green-dark prose-blockquote:text-green-dark prose-blockquote:not-italic prose-h2:font-normal prose-h2:text-4xl mb-36">
+                class="prose-h2:font-serif prose-blockquote:font-serif prose-blockquote:border-green-light prose-headings:text-green-dark prose-blockquote:text-green-dark prose prose-h3:font-bold prose-blockquote:leading-snug prose-blockquote:not-italic prose-h2:font-normal prose-h2:text-4xl mb-36">
                 {!! $tab->post_content !!}
               </div>
             </div>
