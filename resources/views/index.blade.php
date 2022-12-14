@@ -50,7 +50,7 @@
       @foreach ($services as $service)
         <a href="{{ get_permalink($service->ID) }}" class="grid lg:grid-cols-2 gap-8 lg:gap-16 relative">
           <div class="relative">
-            {!! get_the_post_thumbnail($service->ID, null, ['class' => 'w-full rounded-3xl']) !!}
+            {!! get_the_post_thumbnail($service->ID, '16by9', ['class' => 'w-full rounded-3xl']) !!}
 
             @if (!(($loop->iteration + 2) % 3))
               <img
