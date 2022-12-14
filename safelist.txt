@@ -3,3 +3,7 @@ float-right
 rounded-lg
 -mb-48
 lg:px-36
+ml-auto
+lg:ml-0
+lg:absolute
+lg:right-36
