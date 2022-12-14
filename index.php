@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="smooth-scroll" <?php language_attributes(); ?>>
+<html class="scroll-smooth" <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
