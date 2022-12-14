@@ -37,7 +37,7 @@
     </svg>
   </div>
   <div class="bg-green-white relative">
-    <div class="container grid lg:grid-cols-2 gap-8 py-24">
+    <div class="container grid lg:grid-cols-2 gap-8 py-24" id="services">
       <h2 class="text-green-dark font-serif text-5xl">Our services</h2>
       <p class="relative text-lg">
         {{ carbon_get_theme_option('services_text') }}
@@ -46,7 +46,7 @@
 
     </div>
 
-    <div class="container space-y-24 lg:space-y-48 py-48" id="services">
+    <div class="container space-y-24 lg:space-y-48 py-48">
       @foreach ($services as $service)
         <a href="{{ get_permalink($service->ID) }}" class="grid lg:grid-cols-2 gap-8 lg:gap-16 relative">
           <div class="relative">
