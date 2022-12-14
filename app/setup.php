@@ -124,12 +124,12 @@ add_action(
 
         add_post_type_support("page", "excerpt");
 
-        add_image_size("16by9-xxl", 2000, 1125, true);
-        add_image_size("16by9-xl", 1600, 900, true);
-        add_image_size("16by9-l", 1200, 675, true);
-        add_image_size("16by9", 800, 450, true);
-        add_image_size("16by9-s", 400, 225, true);
-        add_image_size("16by9-xs", 240, 135, true);
+        add_image_size("4by3-xxl", 2000, 1500, true);
+        add_image_size("4by3-xl", 1600, 1200, true);
+        add_image_size("4by3-l", 1200, 900, true);
+        add_image_size("4by3", 800, 600, true);
+        add_image_size("4by3-s", 400, 300, true);
+        add_image_size("4by3-xs", 200, 150, true);
     },
     20
 );

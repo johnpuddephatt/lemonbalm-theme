@@ -16,7 +16,7 @@
       <h1 class="text-green-dark mt-8 mb-12 max-w-2xl font-serif text-5xl">{!! $post->post_title !!}</h1>
       <div class="prose prose-xl max-w-2xl">{!! wpautop($post->post_excerpt) !!}</div>
 
-      {!! get_the_post_thumbnail(null, '16by9', [
+      {!! get_the_post_thumbnail(null, '4by3', [
           'class' => 'w-full max-w-xl mt-16 -mb-96 ml-auto relative z-10',
           'sizes' => '80vw',
       ]) !!}
@@ -49,7 +49,7 @@
               <p class="max-w-lg">{{ wp_trim_words($case_study->post_excerpt, 30, '...') }}</p>
             </div>
             <div class="lg:w-72 hidden lg:block">
-              {!! get_the_post_thumbnail($case_study->ID, '16by9', ['class' => 'h-full w-full object-cover object-center']) !!}
+              {!! get_the_post_thumbnail($case_study->ID, '4by3', ['class' => 'h-full w-full object-cover object-center']) !!}
 
             </div>
           </a>

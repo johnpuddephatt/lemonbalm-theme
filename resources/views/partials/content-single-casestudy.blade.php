@@ -7,7 +7,7 @@
       <h1 class="text-green-dark mt-8 mb-12 font-serif max-w-4xl text-5xl">{!! $post->post_title !!}</h1>
       <div class="prose prose-xl max-w-2xl">{!! wpautop($post->post_excerpt) !!}</div>
 
-      {!! get_the_post_thumbnail(null, '16by9', [
+      {!! get_the_post_thumbnail(null, '4by3', [
           'class' => 'w-full max-w-xl mt-16  lg:-mb-96 mx-auto relative z-10',
           'sizes' => '80vw',
       ]) !!}
