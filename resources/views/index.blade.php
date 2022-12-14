@@ -54,10 +54,10 @@
 
             @if (!(($loop->iteration + 2) % 3))
               <img
-                class="hidden lg:block absolute top-auto bottom-0 lg:-bottom-48 w-full lg:w-[120%] max-w-none -left-12 lg:-left-40"
+                class="hidden lg:block absolute top-auto bottom-0 lg:-bottom-48 w-full lg:w-[120%] max-w-none -left-12 lg:-left-60"
                 src="@asset('/images/home-service-1.png')" alt="">
             @elseif(!(($loop->iteration + 1) % 3))
-              <img class="hidden lg:block absolute -top-32 w-full" src="@asset('/images/home-service-2.png')" alt="">
+              <img class="hidden lg:block absolute lg:-left-24 -top-32 w-full" src="@asset('/images/home-service-2.png')" alt="">
             @elseif(!($loop->iteration % 3))
               <img class="hidden lg:block absolute -left-48 -top-48 w-96" src="@asset('/images/home-service-3a.png')" alt="">
               <img class="hidden lg:block -bottom-36 left-[200%] absolute w-64" src="@asset('/images/home-service-3b.png')" alt="">

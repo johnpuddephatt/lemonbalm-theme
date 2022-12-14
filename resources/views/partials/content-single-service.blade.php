@@ -17,7 +17,7 @@
       <div class="prose prose-xl max-w-2xl">{!! wpautop($post->post_excerpt) !!}</div>
 
       {!! get_the_post_thumbnail(null, '4by3', [
-          'class' => 'w-full max-w-xl mt-16 -mb-96 ml-auto relative z-10',
+          'class' => 'rounded-3xl w-full max-w-xl mt-16 -mb-96 ml-auto relative z-10',
           'sizes' => '80vw',
       ]) !!}
 
