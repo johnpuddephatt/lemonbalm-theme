@@ -5,6 +5,14 @@
  */
 
 if (function_exists("register_block_style")) {
+    register_block_style("core/media-text", [
+        "name" => "rounded",
+        "label" => __("Rounded image", "textdomain"),
+        "is_default" => false,
+        "inline_style" =>
+            ".wp-block-media-text.is-style-rounded { margin: 6rem 0rem; } .wp-block-media-text.is-style-rounded img { border-radius: 9999px; overflow: hidden; }",
+    ]);
+
     register_block_style("core/group", [
         "name" => "bleed-background",
         "label" => __("Bleed background", "textdomain"),
