@@ -10,7 +10,7 @@ if (function_exists("register_block_style")) {
         "label" => __("Rounded image", "textdomain"),
         "is_default" => false,
         "inline_style" =>
-            ".wp-block-media-text.is-style-rounded { margin: 6rem 0rem; } .wp-block-media-text.is-style-rounded img { border-radius: 9999px; overflow: hidden; }",
+            ".wp-block-media-text.is-style-rounded { margin: 6rem 0rem; } .wp-block-media-text.is-style-rounded img { max-width: 250px; margin: 0 auto; border-radius: 9999px; overflow: hidden; }",
     ]);
 
     register_block_style("core/group", [
