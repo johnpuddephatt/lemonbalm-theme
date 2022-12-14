@@ -46,7 +46,7 @@
 
     </div>
 
-    <div class="container space-y-24 lg:space-y-48 py-48">
+    <div class="container space-y-24 lg:space-y-48 py-48" id="services">
       @foreach ($services as $service)
         <a href="{{ get_permalink($service->ID) }}" class="grid lg:grid-cols-2 gap-8 lg:gap-16 relative">
           <div class="relative">
@@ -71,9 +71,7 @@
             ]) !!}
           </div>
           <div class="{{ $loop->even ? 'lg:-order-1' : '' }}">
-            <div class="text-green-light text-2xl font-bold">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}.
-              {{ ucfirst($service->post_name) }}
-            </div>
+            <div class="text-green-light text-2xl font-bold">{{ ucfirst($service->post_name) }}</div>
             <h3 class="text-green-dark my-6 font-serif text-3xl">{!! $service->post_title !!}</h3>
             <p class="max-w-md text-lg">{{ wp_trim_words($service->post_excerpt, 30, '...') }}</p>
             <span
