@@ -14,7 +14,7 @@
           <div class="prose max-w-lg pb-24">@php(the_content())</div>
         </div>
         <div>
-          {!! get_the_post_thumbnail(null, 'large', [
+          {!! get_the_post_thumbnail(null, 'xlarge', [
               'class' => 'w-full',
               'sizes' => '80vw',
           ]) !!}
@@ -27,7 +27,7 @@
 
         <div class="js-tabs" id="tabs">
 
-          <ul class="js-tabs__header mt-12 mb-24 flex flex-row justify-center gap-12">
+          <ul class="js-tabs__header mt-12 mb-24 flex flex-col lg:flex-row justify-center gap-6 lg:gap-12">
             @foreach ($tabs as $tab)
               <li><a href="#{{ $tab->post_name }}"
                   class="js-tabs__title border-green-dark text-green-dark inline-block rounded border-2 bg-opacity-10 py-3 px-6 font-bold lowercase">{{ $tab->post_title }}</a>
